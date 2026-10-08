@@ -1,7 +1,8 @@
 import { View, FlatList, StyleSheet } from 'react-native';
-import { Menu } from '../components/Menu';
 import { MovieCard } from '../components/MovieCard';
+import { Menu } from '../components/Menu';
 import { movies } from '../data/movies';
+import styles from '../styles/styles';
 
 export default function Catalogo() {
   return (
@@ -11,7 +12,7 @@ export default function Catalogo() {
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.lista}
+        contentContainerStyle={styles.page}
         renderItem={({ item }) => (
           <MovieCard
             name={item.name}
@@ -27,8 +28,3 @@ export default function Catalogo() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#f8fafc' },
-  lista: { padding: 16 },
-});

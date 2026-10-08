@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
 import { ImageSourcePropType } from 'react-native';
 import styles from '../styles/styles';
 import { Button } from './Button';
+import { useState } from 'react';
 
 type MovieCardProps = {
   name: string;

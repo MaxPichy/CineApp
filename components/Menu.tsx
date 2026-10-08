@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from 'react-native';
-import styles from '../styles/styles';
 import { useRouter } from 'expo-router';
+import styles from '../styles/styles';
 
 type MenuRoute = 'home' | 'list' | 'about';
 

@@ -1,6 +1,53 @@
 import { StyleSheet } from 'react-native';
 
+// Colors
+// #490068ff -> Primary
+// #2d0040ff -> Background Primary
+// #058b8bff -> Secondary
+// #2c2a2dff -> Text
+// #514c53ff -> Text Muted/Details
+
+
 const styles = StyleSheet.create({
+  // Pages
+  container: { flex: 1, backgroundColor: '#dbb8eaff' },
+  page: { padding: 16 },
+
+  // About
+  about_body: {
+    padding: 20,
+    gap: 16,
+    paddingBottom: 32,
+  },
+  about_section: {
+    backgroundColor: '#ffffff',
+    borderRadius: 14,
+    padding: 16,
+    borderLeftWidth: 5,
+    borderLeftColor: '#058b8bff',
+    shadowOpacity: 0.06,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 2,
+  },
+  about_label: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#058b8bff',
+    textTransform: 'uppercase',
+    letterSpacing: 2,
+    marginBottom: 6,
+  },
+  about_text: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 16,
+    color: '#2d0040ff',
+    lineHeight: 22,
+  },  
+
+  // Components
+
   // Button
   button_default: {
     backgroundColor: '#490068ff',
