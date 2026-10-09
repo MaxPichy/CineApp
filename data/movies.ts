@@ -46,7 +46,7 @@ export const movies: Movies[] = [
     rate: 8.2,
     favorite: true,
     general_review:
-      'A classic. May be full of script fails, but still an icon if you talking about y2k fashion and culture.',
+      'A classic. May be full of script fails, but still an icon if you are talking about y2k fashion and culture.',
   },
   {
     id: '4',
