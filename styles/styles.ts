@@ -16,6 +16,71 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#f7edfbff' },
   page: { padding: 16 },
 
+  // Home
+  home_body: {
+    padding: 20,
+    gap: 16,
+    paddingBottom: 32,
+  },
+  home_hero: {
+    alignItems: 'center',
+    paddingVertical: 36,
+    paddingHorizontal: 20,
+    borderRadius: 20,
+    backgroundColor: '#2d0040ff',
+    shadowColor: '#058b8bff',
+    shadowOpacity: 0.4,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 4,
+  },
+  home_icon: {
+    fontSize: 56,
+    marginBottom: 8,
+  },
+  home_title: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 44,
+    fontWeight: 'bold',
+    color: '#f1e1f8ff',
+    letterSpacing: 2,
+  },
+  home_subtitle: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 14,
+    color: '#058b8bff',
+    marginTop: 6,
+    letterSpacing: 3,
+    textTransform: 'uppercase',
+  },
+  home_section: {
+    backgroundColor: '#f1e1f8ff',
+    borderRadius: 14,
+    padding: 16,
+    borderLeftWidth: 3,
+    borderLeftColor: '#058b8bff',
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    shadowColor: '#058b8bff',
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 2,
+  },
+  home_label: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#058b8bff',
+    textTransform: 'uppercase',
+    letterSpacing: 2,
+    marginBottom: 6,
+  },
+  home_text: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 16,
+    color: '#2c2a2dff',
+    lineHeight: 22,
+  },
+
   // List
   list_title: {
     fontFamily: 'Times New Roman, sans-serif',

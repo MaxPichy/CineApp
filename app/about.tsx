@@ -41,7 +41,7 @@ export default function About() {
 
         <Button
           title="Catálogo de Obras"
-          variant = 'secondary'
+          variant = 'primary'
           onPress={() => router.push('/list')}
         />
       </ScrollView>

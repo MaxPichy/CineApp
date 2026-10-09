@@ -1,22 +1,32 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Button } from "../components/Button";
-import { Menu } from "../components/Menu";
-import styles from "../styles/styles";
+import { View, Text, ScrollView } from 'react-native';
+import { useRouter } from 'expo-router';
+import styles from '../styles/styles';
+import { Menu } from '../components/Menu';
+import { Button } from '../components/Button';
 
-export default function Page() {
+export default function Home() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
-      {/* Teste Menu */}
-      <View style={styles.container}>
-            <Menu active="home" />
-        <Text style={{fontFamily: 'Times New Roman, sans-serif', color:'Black', fontSize:50}}>MoviesApp</Text>
-        <Text style={{fontFamily: 'Times New Roman, sans-serif', color:'Black'}}>This is the first page of your app.</Text>
+      <Menu active="home" />
 
-        {/* Teste Button */}
-        <Button title='Teste' variant='primary'></Button>
-        <Button title='Teste' variant='secondary'></Button>
-      </View>
+      <ScrollView
+        contentContainerStyle={styles.home_body}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.home_hero}>
+          <Text style={styles.home_icon}>🎬</Text>
+          <Text style={styles.home_title}>CineApp</Text>
+          <Text style={styles.home_subtitle}>Catálogo de Filmes</Text>
+
+          <Button
+            title="Ver Listagem de Obras"
+            variant = 'secondary'
+            onPress={() => router.push('/list')}
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 }
-
