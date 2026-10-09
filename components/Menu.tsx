@@ -10,8 +10,8 @@ type MenuProps = {
 
 const items: { key: MenuRoute; label: string; route: string }[] = [
   { key: 'home', label: 'Home', route: '/' },
-  { key: 'list', label: 'List', route: '/list' },
-  { key: 'about', label: 'About', route: '/about' },
+  { key: 'list', label: 'Catálogo', route: '/list' },
+  { key: 'about', label: 'Sobre', route: '/about' },
 ];
 
 export function Menu({ active }: MenuProps) {

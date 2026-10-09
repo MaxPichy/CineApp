@@ -25,7 +25,7 @@ export function MovieCard({
   general_review,
   onPress,
 }: MovieCardProps) {
-  const [fav, setFav] = useState(favorite);
+  const [fav, setFav] = useState(false);
 
   return (
     <View style={styles.mc_card}>
@@ -42,8 +42,10 @@ export function MovieCard({
           <Image source={image} style={styles.mc_image} resizeMode="cover" />
 
           <View style={styles.mc_info}>
-            <Text style={styles.mc_title}>{name}</Text>
-            <Text style={styles.mc_rate}>★ {rate.toFixed(1)}</Text>
+            <View style={styles.mc_titleRow}>
+              <Text style={styles.mc_title}>{name}</Text>
+              <Text style={styles.mc_rate}>★ {rate.toFixed(1)}</Text>
+            </View>
             <Text style={styles.mc_details}>
               {genres.join(' • ')} • {year}
             </Text>
@@ -54,8 +56,8 @@ export function MovieCard({
 
       <View style={styles.mc_buttonArea}>
         <Button
-          title={fav ? '★' : '☆'}
-          variant={fav ? 'primary' : 'secondary'}
+          title={fav ? '★ Favorito' : '☆ Favoritar'}
+          variant={fav ? 'secondary' : 'primary'}
           onPress={() => setFav(!fav)}
         />
       </View>

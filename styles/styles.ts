@@ -1,17 +1,31 @@
 import { StyleSheet } from 'react-native';
 
 // Colors
-// #490068ff -> Primary
-// #2d0040ff -> Background Primary
-// #058b8bff -> Secondary
+// #490068ff -> Purple
+// #2d0040ff -> Dark Purple
+// #058b8bff -> Blue
 // #2c2a2dff -> Text
-// #514c53ff -> Text Muted/Details
+// #514c53ff -> Muted/Details
+// #190124ff -> Default Background
+// #f1e1f8ff -> Default Card Background
 
 
 const styles = StyleSheet.create({
-  // Pages
-  container: { flex: 1, backgroundColor: '#dbb8eaff' },
+  // PAGES
+  // General
+  container: { flex: 1, backgroundColor: '#f7edfbff' },
   page: { padding: 16 },
+
+  // List
+  list_title: {
+    fontFamily: 'Times New Roman, sans-serif',
+    alignSelf: 'center',
+    fontSize: 40,
+    color: '#2d0040ff',
+    fontWeight: 'bold',
+    lineHeight: 46,
+    marginBottom: 15,
+  }, 
 
   // About
   about_body: {
@@ -20,13 +34,14 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
   },
   about_section: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f1e1f8ff',
     borderRadius: 14,
     padding: 16,
-    borderLeftWidth: 5,
+    borderLeftWidth: 3,
     borderLeftColor: '#058b8bff',
-    shadowOpacity: 0.06,
-    shadowRadius: 3,
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    shadowColor: '#058b8bff',
     shadowOffset: { width: 0, height: 2 },
     elevation: 2,
   },
@@ -39,15 +54,22 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     marginBottom: 6,
   },
+  about_title: {
+    fontFamily: 'Times New Roman, sans-serif',
+    alignSelf: 'center',
+    fontSize: 40,
+    color: '#2d0040ff',
+    fontWeight: 'bold',
+    lineHeight: 46,
+  },  
   about_text: {
     fontFamily: 'Times New Roman, sans-serif',
     fontSize: 16,
-    color: '#2d0040ff',
+    color: '#2c2a2dff',
     lineHeight: 22,
-  },  
+  }, 
 
-  // Components
-
+  // COMPONENTS
   // Button
   button_default: {
     backgroundColor: '#490068ff',
@@ -86,7 +108,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   menu_activeItem: {
-    backgroundColor: '#3b0253ff',
+    backgroundColor: '#490068ff',
   },
   menu_pressedItem: {
     transform: [{ scale: 0.95 }],
@@ -109,9 +131,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     position: 'relative',
     elevation: 3,
-    boxShadow: '#000',
-    shadowOpacity: 0.1,
+    borderLeftWidth: 3,
+    borderLeftColor: '#058b8bff',
+    shadowOpacity: 0.5,
     shadowRadius: 4,
+    shadowColor: '#058b8bff',
     shadowOffset: { width: 0, height: 2 },
   },
   mc_favIcon: {
@@ -128,36 +152,47 @@ const styles = StyleSheet.create({
   mc_topRow: {
     flexDirection: 'row',
     gap: 12,
+    paddingRight: 28, 
   },
   mc_pressedContent: {
-    backgroundColor: '#edcef9ff',
+    backgroundColor: '#f1e1f8ff',
   },
   mc_image: {
     width: 100,
     height: 150,
     borderRadius: 8,
-    backgroundColor: '#edcef9ff',
+    backgroundColor: '#f1e1f8ff',
   },
   mc_info: {
     flex: 1
   },
-  mc_title: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#2d0040ff'
+  mc_titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 8,
   },
-  mc_details: {
-    fontSize: 14,
-    color: '#514c53ff',
-    marginTop: 4,
+  mc_title: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#2d0040ff',
   },
   mc_rate: {
-    fontSize: 14,
-    color: '#cdd411ff',
+    fontSize: 12,
+    color: '#058b8bff',
     fontWeight: '700',
-    marginTop: 6,
+    marginTop: 7,
+    flexShrink: 0,
+  },
+  mc_details: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 14,
+    color: '#514c53ff',
+    marginTop: 8,
   },
   mc_review: {
+    fontFamily: 'Times New Roman, sans-serif',  
     fontSize: 13,
     color: '#2c2a2dff',
     marginTop: 10,

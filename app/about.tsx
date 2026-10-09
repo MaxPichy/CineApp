@@ -11,21 +11,20 @@ export default function About() {
     <View style={styles.container}>
       <Menu active="about" />
 
-      <ScrollView contentContainerStyle={styles.about_body}>
-        <Text style={styles.about}>CineApp</Text>
-        <Text style={styles.about_subtitle}>Catálogo de Filmes</Text>
 
+      <ScrollView contentContainerStyle={styles.about_body} showsVerticalScrollIndicator={false}>
+        <Text style={styles.about_title}>Sobre o CineApp</Text>
         <View style={styles.about_section}>
           <Text style={styles.about_label}>Finalidade</Text>
           <Text style={styles.about_text}>
             Aplicativo para explorar um catálogo de filmes, visualizar detalhes
-            e favoritar seus títulos preferidos.
+            e favoritar suas obras preferidas.
           </Text>
         </View>
 
         <View style={styles.about_section}>
           <Text style={styles.about_label}>Versão</Text>
-          <Text style={styles.about_text}>1.0.0</Text>
+          <Text style={styles.about_text}>1.0.0 - Inicial</Text>
         </View>
 
         <View style={styles.about_section}>
@@ -41,11 +40,8 @@ export default function About() {
         </View>
 
         <Button
-          title="Home"
-          onPress={() => router.push('/')}
-        />
-        <Button
-          title="Lista de Obras"
+          title="Catálogo de Obras"
+          variant = 'secondary'
           onPress={() => router.push('/list')}
         />
       </ScrollView>
