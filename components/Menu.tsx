@@ -32,9 +32,7 @@ export function Menu({ active }: MenuProps) {
               pressed && styles.menu_pressedItem,
             ]}
           >
-            <Text style={[styles.menu_text, isActive && styles.menu_activeText]}>
-              {item.label}
-            </Text>
+            <Text style={[styles.menu_text, isActive && styles.menu_activeText]}>{item.label}</Text>
           </Pressable>
         );
       })}

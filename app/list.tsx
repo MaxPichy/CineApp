@@ -3,6 +3,7 @@ import { MovieCard } from '../components/MovieCard';
 import { Menu } from '../components/Menu';
 import { movies } from '../data/movies';
 import styles from '../styles/styles';
+import { router } from 'expo-router';
 
 export default function Catalogo() {
   return (
@@ -18,13 +19,17 @@ export default function Catalogo() {
         }
         renderItem={({ item }) => (
           <MovieCard
-          name={item.name}
-          genres={item.genres}
-          year={item.year}
-          image={item.image}
-          rate={item.rate}
-          favorite={item.favorite}
-          general_review={item.general_review}
+            id={item.id}           
+            name={item.name}
+            genres={item.genres}
+            year={item.year}
+            image={item.image}
+            rate={item.rate}
+            favorite={item.favorite}
+            general_review={item.general_review}
+            onPress={() =>
+              router.push({ pathname: '/details', params: { id: item.id } })
+            }
           />
         )}
       />

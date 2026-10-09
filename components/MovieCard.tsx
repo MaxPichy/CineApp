@@ -1,10 +1,12 @@
 import { View, Text, Image, Pressable } from 'react-native';
 import { ImageSourcePropType } from 'react-native';
+import { useState, useEffect } from 'react';
+import { movies } from '../data/movies';
 import styles from '../styles/styles';
 import { Button } from './Button';
-import { useState } from 'react';
 
 type MovieCardProps = {
+  id: string;
   name: string;
   genres: string[];
   year: number;
@@ -16,6 +18,7 @@ type MovieCardProps = {
 };
 
 export function MovieCard({
+  id,
   name,
   genres,
   year,
@@ -25,7 +28,14 @@ export function MovieCard({
   general_review,
   onPress,
 }: MovieCardProps) {
-  const [fav, setFav] = useState(false);
+  const [fav, setFav] = useState(favorite);
+
+  useEffect(() => {
+    const filme = movies.find((m) => m.id === id);
+    if (filme) {
+      filme.favorite = fav;
+    }
+  }, [id, fav]);
 
   return (
     <View style={styles.mc_card}>
@@ -33,10 +43,7 @@ export function MovieCard({
 
       <Pressable
         onPress={onPress}
-        style={({ pressed }) => [
-          styles.mc_content,
-          pressed && styles.mc_pressedContent,
-        ]}
+        style={({ pressed }) => [styles.mc_content, pressed && styles.mc_pressedContent]}
       >
         <View style={styles.mc_topRow}>
           <Image source={image} style={styles.mc_image} resizeMode="cover" />

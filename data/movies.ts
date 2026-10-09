@@ -1,4 +1,4 @@
-import { ImageSourcePropType } from "react-native";
+import { ImageSourcePropType } from 'react-native';
 
 export type Movies = {
   id: string;
@@ -21,7 +21,7 @@ export const movies: Movies[] = [
     duration: '15:12:00',
     year: 2023,
     rate: 10.0,
-    favorite: true,
+    favorite: false,
     general_review:
       'Amazing anime, worth of all minutes you spend on it. Brings all kinds of reflections about life and time.',
   },
@@ -33,7 +33,7 @@ export const movies: Movies[] = [
     duration: '25:36:00',
     year: 2009,
     rate: 10.0,
-    favorite: true,
+    favorite: false,
     general_review: 'Absolute cinema. Best of all times they say. A must if you have good taste.',
   },
   {
@@ -57,7 +57,8 @@ export const movies: Movies[] = [
     year: 2018,
     rate: 9.6,
     favorite: false,
-    general_review: 'A brutal investigation piece, guides you into a real interesting trama. Watch only if you got the guts, by your own will.',
+    general_review:
+      'A brutal investigation piece, guides you into a real interesting trama. Watch only if you got the guts, by your own will.',
   },
   {
     id: '5',

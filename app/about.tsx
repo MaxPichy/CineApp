@@ -11,14 +11,13 @@ export default function About() {
     <View style={styles.container}>
       <Menu active="about" />
 
-
       <ScrollView contentContainerStyle={styles.about_body} showsVerticalScrollIndicator={false}>
         <Text style={styles.about_title}>Sobre o CineApp</Text>
         <View style={styles.about_section}>
           <Text style={styles.about_label}>Finalidade</Text>
           <Text style={styles.about_text}>
-            Aplicativo para explorar um catálogo de filmes, visualizar detalhes
-            e favoritar suas obras preferidas.
+            Aplicativo para explorar um catálogo de filmes, visualizar detalhes e favoritar suas
+            obras preferidas.
           </Text>
         </View>
 
@@ -29,9 +28,7 @@ export default function About() {
 
         <View style={styles.about_section}>
           <Text style={styles.about_label}>Disciplina</Text>
-          <Text style={styles.about_text}>
-            Programação para Dispositivos Móveis I
-          </Text>
+          <Text style={styles.about_text}>Programação para Dispositivos Móveis I</Text>
         </View>
 
         <View style={styles.about_section}>
@@ -39,11 +36,7 @@ export default function About() {
           <Text style={styles.about_text}>Camila Machado de Souza - RA: 2991392513020</Text>
         </View>
 
-        <Button
-          title="Catálogo de Obras"
-          variant = 'primary'
-          onPress={() => router.push('/list')}
-        />
+        <Button title="Catálogo de Obras" variant="primary" onPress={() => router.push('/list')} />
       </ScrollView>
     </View>
   );

@@ -9,7 +9,6 @@ import { StyleSheet } from 'react-native';
 // #190124ff -> Default Background
 // #f1e1f8ff -> Default Card Background
 
-
 const styles = StyleSheet.create({
   // PAGES
   // General
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
     gap: 16,
     paddingBottom: 32,
   },
-  home_hero: {
+  home_banner: {
     alignItems: 'center',
     paddingVertical: 36,
     paddingHorizontal: 20,
@@ -53,33 +52,6 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
     textTransform: 'uppercase',
   },
-  home_section: {
-    backgroundColor: '#f1e1f8ff',
-    borderRadius: 14,
-    padding: 16,
-    borderLeftWidth: 3,
-    borderLeftColor: '#058b8bff',
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
-    shadowColor: '#058b8bff',
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 2,
-  },
-  home_label: {
-    fontFamily: 'Times New Roman, sans-serif',
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: '#058b8bff',
-    textTransform: 'uppercase',
-    letterSpacing: 2,
-    marginBottom: 6,
-  },
-  home_text: {
-    fontFamily: 'Times New Roman, sans-serif',
-    fontSize: 16,
-    color: '#2c2a2dff',
-    lineHeight: 22,
-  },
 
   // List
   list_title: {
@@ -90,7 +62,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     lineHeight: 46,
     marginBottom: 15,
-  }, 
+  },
 
   // About
   about_body: {
@@ -126,13 +98,13 @@ const styles = StyleSheet.create({
     color: '#2d0040ff',
     fontWeight: 'bold',
     lineHeight: 46,
-  },  
+  },
   about_text: {
     fontFamily: 'Times New Roman, sans-serif',
     fontSize: 16,
     color: '#2c2a2dff',
     lineHeight: 22,
-  }, 
+  },
 
   // COMPONENTS
   // Button
@@ -182,10 +154,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Times New Roman, sans-serif',
     color: '#ffffff',
     fontSize: 20,
-    
   },
-  menu_activeText:{
-    fontWeight: 'bold'
+  menu_activeText: {
+    fontWeight: 'bold',
   },
 
   // MovieCard
@@ -212,12 +183,12 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   mc_content: {
-    padding: 12
+    padding: 12,
   },
   mc_topRow: {
     flexDirection: 'row',
     gap: 12,
-    paddingRight: 28, 
+    paddingRight: 28,
   },
   mc_pressedContent: {
     backgroundColor: '#f1e1f8ff',
@@ -229,7 +200,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1e1f8ff',
   },
   mc_info: {
-    flex: 1
+    flex: 1,
   },
   mc_titleRow: {
     flexDirection: 'row',
@@ -257,7 +228,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   mc_review: {
-    fontFamily: 'Times New Roman, sans-serif',  
+    fontFamily: 'Times New Roman, sans-serif',
     fontSize: 13,
     color: '#2c2a2dff',
     marginTop: 10,

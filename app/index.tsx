@@ -11,18 +11,15 @@ export default function Home() {
     <View style={styles.container}>
       <Menu active="home" />
 
-      <ScrollView
-        contentContainerStyle={styles.home_body}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={styles.home_hero}>
+      <ScrollView contentContainerStyle={styles.home_body} showsVerticalScrollIndicator={false}>
+        <View style={styles.home_banner}>
           <Text style={styles.home_icon}>🎬</Text>
           <Text style={styles.home_title}>CineApp</Text>
           <Text style={styles.home_subtitle}>Catálogo de Filmes</Text>
 
           <Button
             title="Ver Listagem de Obras"
-            variant = 'secondary'
+            variant="secondary"
             onPress={() => router.push('/list')}
           />
         </View>
