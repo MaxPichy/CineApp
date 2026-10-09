@@ -44,7 +44,7 @@ export const movies: Movies[] = [
     duration: '',
     year: 2026,
     rate: 8.2,
-    favorite: true,
+    favorite: false,
     general_review:
       'A classic. May be full of script fails, but still an icon if you are talking about y2k fashion and culture.',
   },
@@ -56,7 +56,7 @@ export const movies: Movies[] = [
     duration: '09:17:00',
     year: 2018,
     rate: 9.6,
-    favorite: true,
+    favorite: false,
     general_review: 'A brutal investigation piece, guides you into a real interesting trama. Watch only if you got the guts, by your own will.',
   },
   {
@@ -67,7 +67,7 @@ export const movies: Movies[] = [
     duration: '34:50:00',
     year: 2013,
     rate: 9.2,
-    favorite: true,
+    favorite: false,
     general_review:
       'The trama is complex and well written. No matter how many times you watch, you always notice something new.',
   },
@@ -79,8 +79,32 @@ export const movies: Movies[] = [
     duration: '10:32:00',
     year: 2014,
     rate: 9.6,
-    favorite: true,
+    favorite: false,
     general_review:
       'We can tell this anime is done with lots of love. A real cozy medieval fantasy, great to just relax. I recommend you to grab a snack.',
+  },
+  {
+    id: '7',
+    name: 'Ansatsu Kyoushitsu',
+    image: require('../assets/images/ansatsu_kyoushitsu.jpg'),
+    genres: ['Anime', 'Shonen', 'Action'],
+    duration: '18:48:00',
+    year: 2025,
+    rate: 9.6,
+    favorite: false,
+    general_review:
+      'Well well well.... A really good action anime, but it was made with one and only goal: to make you cry. It will make you wanna go back to high school too, maybe.',
+  },
+  {
+    id: '8',
+    name: 'Hunter X Hunter',
+    image: require('../assets/images/hunter_x_hunter.jpg'),
+    genres: ['Anime', 'Shonen', 'Adventure'],
+    duration: '56:00:00',
+    year: 2011,
+    rate: 10.0,
+    favorite: false,
+    general_review:
+      'The only negative thing I can say about this anime is that it is not finished yet. Just watch it, already.',
   },
 ];
