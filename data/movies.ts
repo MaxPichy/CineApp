@@ -41,7 +41,7 @@ export const movies: Movies[] = [
     name: 'Death Note',
     image: require('../assets/images/death_note.jpg'),
     genres: ['Anime', 'Seinen', 'Investigation'],
-    duration: '',
+    duration: '18:30:00',
     year: 2026,
     rate: 8.2,
     favorite: false,

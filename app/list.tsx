@@ -5,7 +5,7 @@ import { movies } from '../data/movies';
 import styles from '../styles/styles';
 import { router } from 'expo-router';
 
-export default function Catalogo() {
+export default function List() {
   return (
     <View style={styles.container}>
       <Menu active="list" />

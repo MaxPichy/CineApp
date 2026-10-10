@@ -31,9 +31,9 @@ export function MovieCard({
   const [fav, setFav] = useState(favorite);
 
   useEffect(() => {
-    const filme = movies.find((m) => m.id === id);
-    if (filme) {
-      filme.favorite = fav;
+    const movie = movies.find((m) => m.id === id);
+    if (movie) {
+      movie.favorite = fav;
     }
   }, [id, fav]);
 
