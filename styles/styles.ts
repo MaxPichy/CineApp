@@ -338,35 +338,33 @@ const styles = StyleSheet.create({
   },
   mc_topRow: {
     flexDirection: 'row',
-    gap: 12,
+    gap: 15,
     paddingRight: 28,
   },
   mc_pressedContent: {
     backgroundColor: '#f1e1f8ff',
   },
   mc_image: {
-    width: 100,
-    height: 150,
+    width: 150,
+    height: 200,
     borderRadius: 8,
     backgroundColor: '#f1e1f8ff',
   },
   mc_info: {
     flex: 1,
-  },
-  mc_titleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 8,
+    gap: 10,
+    marginTop: 'auto',
+    marginBottom: 'auto',
   },
   mc_title: {
     fontFamily: 'Times New Roman, sans-serif',
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: '700',
     color: '#2d0040ff',
   },
   mc_rate: {
-    fontSize: 12,
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 18,
     color: '#058b8bff',
     fontWeight: '700',
     marginTop: 7,
@@ -378,22 +376,10 @@ const styles = StyleSheet.create({
     color: '#514c53ff',
     marginTop: 8,
   },
-  mc_review: {
-    fontFamily: 'Times New Roman, sans-serif',
-    fontSize: 13,
-    color: '#2c2a2dff',
-    marginTop: 10,
-    lineHeight: 18,
-    fontStyle: 'italic',
-  },
   mc_status: {
     marginTop: 6,
     color: '#058b8bff',
     fontWeight: '600',
-  },
-  mc_buttonArea: {
-    paddingHorizontal: 12,
-    paddingBottom: 12,
   },
 });
 

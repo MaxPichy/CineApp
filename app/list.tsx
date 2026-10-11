@@ -44,7 +44,6 @@ export default function List() {
             id={item.id}
             name={item.name}
             genres={item.genres}
-            year={item.year}
             image={item.image}
             rate={item.rate}
             favorite={item.favorite}
