@@ -361,14 +361,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#2d0040ff',
   },
-  mc_rate: {
-    fontFamily: 'Times New Roman, sans-serif',
-    fontSize: 18,
-    color: '#058b8bff',
-    fontWeight: '700',
-    marginTop: 7,
-    flexShrink: 0,
-  },
   mc_details: {
     fontFamily: 'Times New Roman, sans-serif',
     fontSize: 14,

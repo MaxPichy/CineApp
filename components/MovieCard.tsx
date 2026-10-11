@@ -10,13 +10,12 @@ type MovieCardProps = {
   name: string;
   genres: string[];
   image: ImageSourcePropType;
-  rate: number;
   favorite: boolean;
   general_review: string;
   onPress?: () => void;
 };
 
-export function MovieCard({ id, name, genres, image, rate, favorite, onPress }: MovieCardProps) {
+export function MovieCard({ id, name, genres, image, favorite, onPress }: MovieCardProps) {
   const [fav, setFav] = useState(favorite);
 
   useEffect(() => {
@@ -39,7 +38,6 @@ export function MovieCard({ id, name, genres, image, rate, favorite, onPress }: 
 
           <View style={styles.mc_info}>
             <Text style={styles.mc_title}>{name}</Text>
-            <Text style={styles.mc_rate}>★ {rate.toFixed(1)}</Text>
             <Text style={styles.mc_details}>{genres.join(' • ')}</Text>
             <Button
               title={fav ? '★ Favorito' : '☆ Favoritar'}

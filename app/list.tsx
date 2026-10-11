@@ -45,7 +45,6 @@ export default function List() {
             name={item.name}
             genres={item.genres}
             image={item.image}
-            rate={item.rate}
             favorite={item.favorite}
             general_review={item.general_review}
             onPress={() => router.push({ pathname: '/details', params: { id: item.id } })}
