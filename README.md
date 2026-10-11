@@ -24,13 +24,13 @@ estudados até a Aula 09.
 
 - **Tela inicial** com logotipo, descrição e botão de acesso ao catálogo
 - **Catálogo** com títulos cadastrados diretamente no código, cada um com:
-  - Imagem                 - Consultas: catálogo, detalhes 
-  - Nome                   - Consultas: catálogo, detalhes
-  - Gêneros (array)        - Consultas: catálogo, detalhes
-  - Ano                    - Consultas: detalhes
-  - Nota (rating)          - Consultas: detalhes
-  - Status de favorito     - Consultas: catálogo, detalhes
-  - Sinopse / review geral - Consultas: detalhes
+  - Imagem                  
+  - Nome                   
+  - Gêneros (array)        
+  - Ano                    
+  - Nota (rating)          
+  - Status de favorito     
+  - Sinopse / review geral
 - **Sistema de favoritos** com `useState` — o botão alterna entre
   `☆ Favoritar` e `★ Favorito`, com mudança visual imediata
 - **Tela de detalhes** com pôster grande e metadados completos
@@ -94,12 +94,57 @@ CineApp/
 
 ---
 
+## Como executar
+
+### Pré-requisitos
+
+- **Node.js** versão 18 ou superior
+- **npm** (vem com o Node)
+- Aplicativo **Expo Go** no celular (opcional)
+- Emulador Android ou iOS (opcional)
+
+### Passo a passo
+
+**1. Clone o repositório ou extraia o projeto:**
+
+```bash
+git clone <https://github.com/MaxPichy/CineApp.git>
+cd CineApp
+
+npm install
+
+npx expo start
+```
+
+Escolha como abrir:
+
+Pressione a para abrir no emulador Android
+
+Pressione i para abrir no simulador iOS
+
+Pressione w para abrir no navegador
+
+Ou escaneie o QR Code com o app Expo Go no celular
+
+---
+
 ## Scripts disponíveis
 
 | Comando | Descrição | 
-|---------|-----------|
-|**npm start**	| Inicia o servidor Expo|
-|**npm run android** | Abre no emulador Android|
-|**npm run ios** | Abre no simulador iOS|
-|**npm run web** | Abre no navegador|
-|**npm run format** | Formata o código com Prettier|
+| --------- | ----------- |
+| `npm start`	| Inicia o servidor Expo |
+| `npm run android` | Abre no emulador Android |
+| `npm run ios` | Abre no simulador iOS |
+| `npm run web` | Abre no navegador |
+| `npm run format` | Formata o código com Prettier |
+
+---
+
+## Fluxo de navegação
+```txt
+Início ──▶ Catálogo ──▶ Detalhes ──▶ Voltar
+              │
+              └────▶ Sobre ──▶ Voltar
+```
+
+---
