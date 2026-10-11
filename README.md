@@ -1,56 +1,105 @@
-# Welcome to your Expo app 👋
+# CineApp — Catálogo de Filmes
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Aluno:** Camila Machado de Souza \
+**RA:** 2991392513020 \
+**Aplicativo:** CineApp \
+**Disciplina:** Programação para Dispositivos Móveis I \
 
-## Get started
+---
 
-1. Install dependencies
+## Descrição
 
-   ```bash
-   npm install
-   ```
+O **CineApp** é uma aplicação mobile desenvolvida com **React Native + Expo Router**
+que apresenta um catálogo de filmes e animes. O usuário pode navegar entre telas,
+visualizar detalhes de cada título, favoritar seus preferidos e consultar
+informações sobre o aplicativo.
 
-2. Start the app
+O projeto foi desenvolvido como atividade avaliativa da disciplina
+**Programação para Dispositivos Móveis I**, aplicando exclusivamente os conceitos
+estudados até a Aula 09.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Funcionalidades
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Tela inicial** com logotipo, descrição e botão de acesso ao catálogo
+- **Catálogo** com títulos cadastrados diretamente no código, cada um com:
+  - Imagem                 - Consultas: catálogo, detalhes 
+  - Nome                   - Consultas: catálogo, detalhes
+  - Gêneros (array)        - Consultas: catálogo, detalhes
+  - Ano                    - Consultas: detalhes
+  - Nota (rating)          - Consultas: detalhes
+  - Status de favorito     - Consultas: catálogo, detalhes
+  - Sinopse / review geral - Consultas: detalhes
+- **Sistema de favoritos** com `useState` — o botão alterna entre
+  `☆ Favoritar` e `★ Favorito`, com mudança visual imediata
+- **Tela de detalhes** com pôster grande e metadados completos
+- **Tela "Sobre"** com nome, finalidade, versão, disciplina e identificação do aluno
+- **Navegação entre telas** com Expo Router
+- **Menu de navegação** reutilizável, presente em todas as telas
+- **`useEffect`** em duas situações:
+  1. No catálogo, para simular carregamento e registrar mensagem no console
+  2. No card de filme, para sincronizar o estado de favorito com o array de dados
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Tecnologias e conceitos aplicados
 
-When you're ready, run:
+- **React Native** com **Expo**
+- **TypeScript** (`.tsx`)
+- **Expo Router** para navegação entre telas
+- **Componentes fundamentais:** `View`, `Text`, `Image`
+- **`StyleSheet`** para estilos centralizados
+- **Flexbox** para layout (`flexDirection`, `flex`, `justifyContent`, `alignItems`, `gap`)
+- **`Pressable`** com feedback visual via `({ pressed }) => [...]`
+- **`useState`** para o estado de favorito
+- **`useEffect`** para carregamento e sincronização
+- **Componentes reutilizáveis** com **Props**
 
-```bash
-npm run reset-project
+---
+
+## Componentes reutilizáveis
+
+| Componente | Arquivo | Descrição |
+|------------|---------|-----------|
+| `MovieCard` | `components/MovieCard.tsx` | Apresenta um filme no catálogo |
+| `Button` | `components/Button.tsx` | Botão com variantes e feedback de toque |
+| `Menu` | `components/Menu.tsx` | Barra de navegação entre telas |
+
+---
+
+## Estrutura do projeto
+
+```txt
+CineApp/
+├── app/
+│   ├── index.tsx          # Tela inicial
+│   ├── list.tsx           # Tela de catálogo
+│   ├── details.tsx        # Tela de detalhes
+│   └── about.tsx          # Tela "Sobre"
+├── components/
+│   ├── MovieCard.tsx      # Card reutilizável de filme
+│   ├── Button.tsx         # Botão reutilizável
+│   └── Menu.tsx           # Menu de navegação reutilizável
+├── data/
+│   └── movies.ts          # Dados dos filmes + tipo Movie
+├── styles/
+│   └── styles.ts          # Estilos centralizados
+├── assets/                # Imagens dos filmes e do app
+├── app.json
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## Scripts disponíveis
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+| Comando | Descrição | 
+|---------|-----------|
+|**npm start**	| Inicia o servidor Expo|
+|**npm run android** | Abre no emulador Android|
+|**npm run ios** | Abre no simulador iOS|
+|**npm run web** | Abre no navegador|
+|**npm run format** | Formata o código com Prettier|
