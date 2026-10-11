@@ -24,12 +24,12 @@ estudados até a Aula 09.
 
 - **Tela inicial** com logotipo, descrição e botão de acesso ao catálogo
 - **Catálogo** com títulos cadastrados diretamente no código, cada um com:
-  - Imagem                  
-  - Nome                   
-  - Gêneros (array)        
-  - Ano                    
-  - Nota (rating)          
-  - Status de favorito     
+  - Imagem
+  - Nome
+  - Gêneros (array)
+  - Ano
+  - Nota (rating)
+  - Status de favorito
   - Sinopse / review geral
 - **Sistema de favoritos** com `useState` — o botão alterna entre
   `☆ Favoritar` e `★ Favorito`, com mudança visual imediata
@@ -60,11 +60,11 @@ estudados até a Aula 09.
 
 ## Componentes reutilizáveis
 
-| Componente | Arquivo | Descrição |
-|------------|---------|-----------|
-| `MovieCard` | `components/MovieCard.tsx` | Apresenta um filme no catálogo |
-| `Button` | `components/Button.tsx` | Botão com variantes e feedback de toque |
-| `Menu` | `components/Menu.tsx` | Barra de navegação entre telas |
+| Componente  | Arquivo                    | Descrição                               |
+| ----------- | -------------------------- | --------------------------------------- |
+| `MovieCard` | `components/MovieCard.tsx` | Apresenta um filme no catálogo          |
+| `Button`    | `components/Button.tsx`    | Botão com variantes e feedback de toque |
+| `Menu`      | `components/Menu.tsx`      | Barra de navegação entre telas          |
 
 ---
 
@@ -130,17 +130,18 @@ Ou escaneie o QR Code com o app Expo Go no celular
 
 ## Scripts disponíveis
 
-| Comando | Descrição | 
-| --------- | ----------- |
-| `npm start`	| Inicia o servidor Expo |
-| `npm run android` | Abre no emulador Android |
-| `npm run ios` | Abre no simulador iOS |
-| `npm run web` | Abre no navegador |
-| `npm run format` | Formata o código com Prettier |
+| Comando           | Descrição                     |
+| ----------------- | ----------------------------- |
+| `npm start`       | Inicia o servidor Expo        |
+| `npm run android` | Abre no emulador Android      |
+| `npm run ios`     | Abre no simulador iOS         |
+| `npm run web`     | Abre no navegador             |
+| `npm run format`  | Formata o código com Prettier |
 
 ---
 
 ## Fluxo de navegação
+
 ```txt
 Início ──▶ Catálogo ──▶ Detalhes ──▶ Voltar
               │
