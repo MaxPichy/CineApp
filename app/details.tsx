@@ -53,11 +53,6 @@ export default function Details() {
           <Text style={styles.dt_review}>"{movie.general_review}"</Text>
         </View>
 
-        <Button
-          title={fav ? '★ Favorito' : '☆ Favoritar'}
-          variant={fav ? 'secondary' : 'primary'}
-          onPress={() => setFav(!fav)}
-        />
         <Button title="Voltar" variant="secondary" onPress={() => router.back()} />
       </ScrollView>
     </View>
