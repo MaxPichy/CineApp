@@ -16,8 +16,8 @@ export default function About() {
         <View style={styles.about_section}>
           <Text style={styles.about_label}>Finalidade</Text>
           <Text style={styles.about_text}>
-            Aplicativo para explorar um catálogo de filmes, visualizar detalhes e favoritar suas
-            obras preferidas.
+            Aplicativo para explorar um catálogo de filmes / animes, visualizar detalhes e favoritar
+            suas obras preferidas.
           </Text>
         </View>
 

@@ -29,10 +29,7 @@ export default function Details() {
     <View style={styles.container}>
       <Menu active="list" />
 
-      <ScrollView
-        contentContainerStyle={styles.dt_body}
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView contentContainerStyle={styles.dt_body} showsVerticalScrollIndicator={false}>
         <View style={styles.dt_posterWrapper}>
           <Image source={movie.image} style={styles.dt_poster} resizeMode="cover" />
           <Text style={styles.dt_favIcon}>{fav ? '★' : '☆'}</Text>
@@ -44,7 +41,7 @@ export default function Details() {
         </View>
 
         <View style={styles.dt_metaRow}>
-          <Text style={styles.dt_meta}>{movie.year}</Text>
+          <Text style={styles.dt_meta}>Ano: {movie.year}</Text>
           <Text style={styles.dt_metaDot}>•</Text>
           <Text style={styles.dt_meta}>Duração: {movie.duration || '—'}</Text>
         </View>
@@ -61,11 +58,7 @@ export default function Details() {
           variant={fav ? 'secondary' : 'primary'}
           onPress={() => setFav(!fav)}
         />
-        <Button
-          title="Voltar"
-          variant="secondary"
-          onPress={() => router.back()}
-        />
+        <Button title="Voltar" variant="secondary" onPress={() => router.back()} />
       </ScrollView>
     </View>
   );
