@@ -1,8 +1,8 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, Image } from 'react-native';
+import { Button } from '../components/Button';
+import { Menu } from '../components/Menu';
 import { useRouter } from 'expo-router';
 import styles from '../styles/styles';
-import { Menu } from '../components/Menu';
-import { Button } from '../components/Button';
 
 export default function Home() {
   const router = useRouter();
@@ -13,6 +13,12 @@ export default function Home() {
 
       <ScrollView contentContainerStyle={styles.home_body} showsVerticalScrollIndicator={false}>
         <View style={styles.home_banner}>
+          <Image
+            source={require('../assets/images/cine_app_logo.jpg')}
+            style={styles.home_bannerImage}
+            resizeMode="cover"
+          />
+          <View style={styles.home_bannerOverlay} />
           <Text style={styles.home_icon}>🎬</Text>
           <Text style={styles.home_title}>CineApp</Text>
           <Text style={styles.home_subtitle}>Catálogo de Filmes</Text>

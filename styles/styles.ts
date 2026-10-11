@@ -22,16 +22,29 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
   },
   home_banner: {
+    position: 'relative',
     alignItems: 'center',
-    paddingVertical: 36,
+    justifyContent: 'center',
+    paddingVertical: 48,
     paddingHorizontal: 20,
     borderRadius: 20,
+    overflow: 'hidden',
     backgroundColor: '#2d0040ff',
+    minHeight: 220,
     shadowColor: '#058b8bff',
     shadowOpacity: 0.4,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 4 },
     elevation: 4,
+  },
+  home_bannerImage: {
+    ...StyleSheet.absoluteFill,
+    width: '100%',
+    height: '100%',
+  },
+  home_bannerOverlay: {
+    ...StyleSheet.absoluteFill,
+    backgroundColor: 'rgba(25, 1, 36, 0.65)',
   },
   home_icon: {
     fontSize: 56,
@@ -43,6 +56,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#f1e1f8ff',
     letterSpacing: 2,
+    zIndex: 1,
   },
   home_subtitle: {
     fontFamily: 'Times New Roman, sans-serif',
@@ -51,6 +65,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
     letterSpacing: 3,
     textTransform: 'uppercase',
+    zIndex: 1,
   },
 
   // List
@@ -62,6 +77,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     lineHeight: 46,
     marginBottom: 15,
+  },
+  loading_box: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 12,
+  },
+  loading_text: {
+    fontFamily: 'Times New Roman, sans-serif',
+    fontSize: 16,
+    color: '#490068ff',
+    fontStyle: 'italic',
   },
 
   // About
