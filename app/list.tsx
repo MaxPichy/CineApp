@@ -46,7 +46,6 @@ export default function List() {
             genres={item.genres}
             image={item.image}
             favorite={item.favorite}
-            general_review={item.general_review}
             onPress={() => router.push({ pathname: '/details', params: { id: item.id } })}
           />
         )}

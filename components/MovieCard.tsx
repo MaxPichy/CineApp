@@ -11,7 +11,6 @@ type MovieCardProps = {
   genres: string[];
   image: ImageSourcePropType;
   favorite: boolean;
-  general_review: string;
   onPress?: () => void;
 };
 
