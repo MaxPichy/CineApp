@@ -281,7 +281,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#2d0040ff',
     paddingVertical: 8,
     paddingHorizontal: 12,
-    gap: 3,
+    gap: 5,
+  },
+  menu_image: {
+    width: 50,
+    height: 40,
+    borderRadius: 50,
+    borderWidth: 2,
+    borderColor: '#490068ff',
   },
   menu_item: {
     paddingVertical: 8,

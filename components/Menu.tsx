@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import styles from '../styles/styles';
 
@@ -19,6 +19,7 @@ export function Menu({ active }: MenuProps) {
 
   return (
     <View style={styles.menu_container}>
+      <Image style={styles.menu_image} source={require('../assets/images/cine_app_logo.jpg')} />
       {items.map((item) => {
         const isActive = item.key === active;
 
