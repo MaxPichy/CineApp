@@ -29,8 +29,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 20,
     overflow: 'hidden',
-    backgroundColor: '#2d0040ff',
-    minHeight: 220,
+    minHeight: 350,
     shadowColor: '#058b8bff',
     shadowOpacity: 0.4,
     shadowRadius: 6,
@@ -46,9 +45,9 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(25, 1, 36, 0.65)',
   },
-  home_icon: {
-    fontSize: 56,
-    marginBottom: 8,
+  home_topRow: {
+    marginTop: 0,
+    marginBottom: 150,
   },
   home_title: {
     fontFamily: 'Times New Roman, sans-serif',

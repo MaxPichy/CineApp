@@ -19,9 +19,10 @@ export default function Home() {
             resizeMode="cover"
           />
           <View style={styles.home_bannerOverlay} />
-          <Text style={styles.home_icon}>🎬</Text>
-          <Text style={styles.home_title}>CineApp</Text>
-          <Text style={styles.home_subtitle}>Catálogo de Filmes</Text>
+          <View style={styles.home_topRow}>
+            <Text style={styles.home_title}>CineApp</Text>
+            <Text style={styles.home_subtitle}>Catálogo de Filmes</Text>
+          </View>
 
           <Button
             title="Ver Listagem de Obras"
